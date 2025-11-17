@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasblleidy Pirazán García - Currículum Vitae</title>
+    <title>Jasblleidy Pirazán García - Politóloga</title>
     <style>
         * {
             margin: 0;
@@ -15,95 +15,357 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
+        /* Header */
         header {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
             text-align: center;
-            border-bottom: 3px solid #2c5282;
-            padding-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             margin-bottom: 30px;
         }
 
         h1 {
             color: #2c5282;
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #667eea;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
 
         .contact-info {
             color: #666;
-            font-size: 1em;
+            font-size: 0.95em;
         }
 
-        .contact-info span {
-            margin: 0 10px;
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
         }
 
-        .summary {
-            background: #f7fafc;
-            padding: 20px;
-            border-left: 4px solid #2c5282;
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Abstract */
+        .abstract {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             margin-bottom: 30px;
-            font-style: italic;
         }
 
-        h2 {
+        .abstract h2 {
             color: #2c5282;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 10px;
-            margin-top: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
         }
 
-        .job {
-            margin-bottom: 25px;
-        }
-
-        .job-title {
-            font-weight: bold;
-            color: #2d3748;
+        .abstract p {
             font-size: 1.1em;
-        }
-
-        .job-company {
             color: #4a5568;
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        .nav-tabs {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav-tab {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
             font-weight: 600;
+            transition: all 0.3s ease;
+            background: #e2e8f0;
+            color: #4a5568;
         }
 
-        .job-date {
-            color: #718096;
-            font-size: 0.9em;
+        .nav-tab:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Filters */
+        .filters {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .filter-group {
+            margin-bottom: 15px;
+        }
+
+        .filter-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: #2c5282;
             margin-bottom: 10px;
+            display: block;
         }
 
-        .job ul {
-            margin-left: 20px;
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        .job li {
+        .tag {
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+            background: white;
+            color: #4a5568;
+        }
+
+        .tag:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .tag.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .tag.datos { border-color: #38a169; }
+        .tag.datos.active { background: #38a169; border-color: #38a169; }
+        .tag.politicas { border-color: #d69e2e; }
+        .tag.politicas.active { background: #d69e2e; border-color: #d69e2e; }
+        .tag.planeacion { border-color: #e53e3e; }
+        .tag.planeacion.active { background: #e53e3e; border-color: #e53e3e; }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .section-card h2 {
+            color: #2c5282;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item.hidden {
+            display: none;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border: 4px solid #667eea;
+            border-radius: 50%;
+        }
+
+        .timeline-item.cargo-publico::before { border-color: #2c5282; }
+        .timeline-item.docencia::before { border-color: #38a169; }
+        .timeline-item.consultoria::before { border-color: #d69e2e; }
+
+        .timeline-date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.95em;
             margin-bottom: 5px;
         }
 
-        .education-item {
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            color: #4a5568;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description ul {
+            margin-left: 20px;
+        }
+
+        .timeline-description li {
+            margin-bottom: 5px;
+        }
+
+        .timeline-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .item-tag {
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: white;
+        }
+
+        .item-tag.datos { background: #38a169; }
+        .item-tag.politicas { background: #d69e2e; }
+        .item-tag.planeacion { background: #e53e3e; }
+
+        /* Projects */
+        .project-card {
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+
+        .project-subtitle {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: #4a5568;
             margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 10px;
         }
 
         .education-title {
             font-weight: bold;
             color: #2d3748;
+            font-size: 1.1em;
         }
 
         .education-institution {
-            color: #4a5568;
+            color: #667eea;
+            font-weight: 600;
         }
 
         .education-date {
@@ -111,83 +373,45 @@
             font-size: 0.9em;
         }
 
+        /* Publications */
         .publication {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 3px solid #e2e8f0;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
         }
 
         .publication a {
-            color: #2c5282;
+            color: #667eea;
             text-decoration: none;
+            font-weight: 600;
         }
 
         .publication a:hover {
             text-decoration: underline;
         }
 
-        .project {
-            margin-bottom: 15px;
-            padding: 10px;
-            background: #f7fafc;
-            border-radius: 5px;
-        }
-
-        .project-title {
-            font-weight: bold;
-            color: #2d3748;
-        }
-
-        .project-role {
-            color: #718096;
-            font-size: 0.9em;
-        }
-
-        .teaching-section {
-            margin-bottom: 20px;
-        }
-
-        .teaching-institution {
-            font-weight: bold;
-            color: #2d3748;
-            margin-bottom: 5px;
-        }
-
-        .teaching-date {
-            color: #718096;
-            font-size: 0.9em;
-        }
-
-        .teaching-courses {
-            margin-left: 20px;
-            margin-top: 5px;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                padding: 20px;
-            }
-
             h1 {
-                font-size: 1.8em;
+                font-size: 2em;
             }
 
-            .contact-info span {
-                display: block;
-                margin: 5px 0;
-            }
-        }
-
-        @media print {
-            body {
-                background: white;
+            .nav-tabs {
+                flex-direction: column;
             }
 
-            .container {
-                box-shadow: none;
-                margin: 0;
-                padding: 20px;
+            .nav-tab {
+                width: 100%;
+                text-align: center;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 15px;
             }
         }
     </style>
@@ -196,161 +420,360 @@
     <div class="container">
         <header>
             <h1>Jasblleidy Pirazán García</h1>
+            <div class="subtitle">Politóloga | Magíster en Estudios Políticos</div>
             <div class="contact-info">
-                <span>Medellín – Antioquia</span> |
-                <span>jasblleidy@gmail.com</span> |
-                <span>310 822 2613</span>
+                Medellín, Antioquia |
+                <a href="mailto:jasblleidy@gmail.com">jasblleidy@gmail.com</a> |
+                310 822 2613
             </div>
         </header>
 
-        <div class="summary">
-            Magíster en Estudios Políticos. Especializada en la estructuración técnica y metodológica de sistemas de información, y aplicación del Análisis de Redes Sociales para comprender el entorno sociopolítico. Con amplia experiencia en la formulación, análisis y evaluación de Políticas Públicas. Analista de datos sociopolíticos orientados en la construcción de soluciones basadas en evidencia. Docente universitaria en el área de Administración Pública, Planeación y Políticas Públicas.
+        <div class="abstract">
+            <h2>Perfil Profesional</h2>
+            <p>
+                Especializada en la estructuración técnica y metodológica de sistemas de información, y aplicación del Análisis de Redes Sociales para comprender el entorno sociopolítico. Con amplia experiencia en la formulación, análisis y evaluación de Políticas Públicas. Analista de datos sociopolíticos orientados en la construcción de soluciones basadas en evidencia. Docente universitaria en el área de Administración Pública, Planeación y Políticas Públicas.
+            </p>
         </div>
 
-        <section>
-            <h2>Experiencia Laboral</h2>
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showSection('experiencia')">Experiencia</button>
+            <button class="nav-tab" onclick="showSection('proyectos')">Proyectos Pedagógicos</button>
+            <button class="nav-tab" onclick="showSection('formacion')">Formación</button>
+            <button class="nav-tab" onclick="showSection('publicaciones')">Publicaciones</button>
+        </div>
 
-            <div class="job">
-                <div class="job-title">Directora de Proyectos</div>
-                <div class="job-company">Polidata</div>
-                <div class="job-date">Octubre 2023 - Actualmente | Medellín</div>
-                <ul>
-                    <li>Liderar la construcción del Modelo de Intervención Social para una empresa minera en el marco de sus intervenciones sociales voluntarias.</li>
-                    <li>Diseñar un sistema de indicadores para la medición del valor agregado.</li>
-                    <li>Implementar el sistema de indicadores multidimensionales para la medición del valor agregado.</li>
-                    <li>Liderar ejercicios de inteligencia de negocios para optimizar la toma de decisiones en PYMES.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="job-title">Investigadora</div>
-                <div class="job-company">Universidad EAFIT - Centro de Análisis Político</div>
-                <div class="job-date">Agosto 2023 - Noviembre 2023 | Medellín</div>
-                <ul>
-                    <li>Desarrollar e implementar instrumentos de investigación para evaluar la implementación del Acuerdo Marco y el Modelo de Gerencia Pública de la Gobernación de Antioquia.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="job-title">Directora</div>
-                <div class="job-company">Alcaldía de Medellín - Departamento Administrativo de Planeación</div>
-                <div class="job-date">Agosto 2022 - Junio 2023 | Medellín</div>
-                <ul>
-                    <li>Liderar el proceso técnico del direccionamiento estratégico y gestión de la información del Distrito para el cumplimiento de las metas y objetivos de los instrumentos de planificación.</li>
-                    <li>Propender por la coordinación, articulación y concurrencia de las dependencias misionales en torno a los planes, programas y proyectos para asegurar la calidad técnica en los procesos y el mejoramiento de las condiciones de vida de los habitantes de Medellín.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="job-title">Subdirectora de Prospectiva, Información y Evaluación Estratégica</div>
-                <div class="job-company">Alcaldía de Medellín - Departamento Administrativo de Planeación</div>
-                <div class="job-date">Mayo 2021 - Agosto 2022 | Medellín</div>
-                <ul>
-                    <li>Liderar los procesos de seguimiento y evaluación de las políticas, planes, programas y proyectos de la Administración Distrital.</li>
-                    <li>Liderar el ciclo de las operaciones estadísticas estratégicas; generación de lineamientos metodológicos, procesos de calidad, visualización de datos y gestión de toma de decisiones basada en datos.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="job-title">Profesional Especializado</div>
-                <div class="job-company">Alcaldía de Medellín - Unidad de Planeación y Política Social</div>
-                <div class="job-date">Febrero 2020 - Mayo 2021 | Medellín</div>
-                <ul>
-                    <li>Desarrollar procesos técnicos para el soporte de políticas, programas y proyectos sociales.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="job-title">Coordinadora</div>
-                <div class="job-company">Fundación SOCYA</div>
-                <div class="job-date">Julio 2017 - Enero 2020 | Medellín</div>
-                <ul>
-                    <li>Liderar construcción, estructuración y puesta en marcha de Sistemas de Información para procesos sociales mediante la articulación entre los procesos de T.I - Proyectos Socioambientales y Sistemas de Información Geográfica.</li>
-                    <li>Coordinadora de procesos de caracterización socioeconómica de población y análisis de percepción de comunidades urbanas y rurales.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Experiencia Docente</h2>
-
-            <div class="teaching-section">
-                <div class="teaching-institution">Universidad Nacional de Colombia, sede Medellín</div>
-                <div class="teaching-date">Docente Ocasional | Febrero 2016 - Actualmente</div>
-                <div class="teaching-courses">
-                    <strong>Pregrado:</strong> Política Social Comparada (2016-I, 2016-II), Distopías y Política (2016-II, 2017-I), Evaluación de Políticas Públicas (2019-II, 2020-II, 2021-I), Gestión y Administración Pública (2023-II, Actualmente)
+        <!-- Experiencia Section -->
+        <div id="experiencia" class="content-section active">
+            <div class="filters">
+                <div class="filter-group">
+                    <span class="filter-label">Filtrar por categoría:</span>
+                    <div class="tags">
+                        <span class="tag active" onclick="filterCategory('todos')">Todos</span>
+                        <span class="tag" onclick="filterCategory('cargo-publico')">Cargos Públicos</span>
+                        <span class="tag" onclick="filterCategory('docencia')">Experiencia Docente</span>
+                        <span class="tag" onclick="filterCategory('consultoria')">Consultoría</span>
+                    </div>
                 </div>
-                <div class="teaching-courses">
-                    <strong>Posgrado:</strong> Ciencia Política I (2016-II), Ciencia Política II (2017-I), Fundamentos de Gestión y Política Pública (2017-I)
+                <div class="filter-group">
+                    <span class="filter-label">Filtrar por área:</span>
+                    <div class="tags">
+                        <span class="tag datos" onclick="filterTag('datos')">Datos</span>
+                        <span class="tag politicas" onclick="filterTag('politicas')">Políticas Públicas</span>
+                        <span class="tag planeacion" onclick="filterTag('planeacion')">Planeación Territorial</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="teaching-section">
-                <div class="teaching-institution">Institución Universitaria Pascual Bravo</div>
-                <div class="teaching-date">Docente de Posgrado | Octubre 2024 - Actualmente</div>
-                <div class="teaching-courses">
-                    Curso Políticas y Marco Jurídico para el Proyecto - Maestría en Diseño y Evaluación de Proyectos Regionales
+            <div class="section-card">
+                <h2>Línea de Tiempo Profesional</h2>
+                <div class="timeline">
+                    <!-- Polidata -->
+                    <div class="timeline-item consultoria" data-tags="datos politicas">
+                        <div class="timeline-date">Octubre 2023 - Actualmente</div>
+                        <div class="timeline-title">Directora de Proyectos</div>
+                        <div class="timeline-company">Polidata</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Liderar la construcción del Modelo de Intervención Social para empresa minera</li>
+                                <li>Diseñar e implementar sistema de indicadores multidimensionales</li>
+                                <li>Liderar ejercicios de inteligencia de negocios para PYMES</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag datos">Datos</span>
+                            <span class="item-tag politicas">Políticas Públicas</span>
+                        </div>
+                    </div>
+
+                    <!-- EAFIT -->
+                    <div class="timeline-item consultoria" data-tags="politicas">
+                        <div class="timeline-date">Agosto 2023 - Noviembre 2023</div>
+                        <div class="timeline-title">Investigadora</div>
+                        <div class="timeline-company">Universidad EAFIT - Centro de Análisis Político</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Evaluar implementación del Acuerdo Marco y Modelo de Gerencia Pública de la Gobernación de Antioquia</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag politicas">Políticas Públicas</span>
+                        </div>
+                    </div>
+
+                    <!-- Directora DAP -->
+                    <div class="timeline-item cargo-publico" data-tags="planeacion politicas datos">
+                        <div class="timeline-date">Agosto 2022 - Junio 2023</div>
+                        <div class="timeline-title">Directora</div>
+                        <div class="timeline-company">Alcaldía de Medellín - Departamento Administrativo de Planeación</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Liderar direccionamiento estratégico y gestión de la información del Distrito</li>
+                                <li>Coordinar dependencias misionales para asegurar calidad técnica en procesos</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag planeacion">Planeación Territorial</span>
+                            <span class="item-tag politicas">Políticas Públicas</span>
+                            <span class="item-tag datos">Datos</span>
+                        </div>
+                    </div>
+
+                    <!-- Subdirectora -->
+                    <div class="timeline-item cargo-publico" data-tags="datos politicas planeacion">
+                        <div class="timeline-date">Mayo 2021 - Agosto 2022</div>
+                        <div class="timeline-title">Subdirectora de Prospectiva, Información y Evaluación Estratégica</div>
+                        <div class="timeline-company">Alcaldía de Medellín - Departamento Administrativo de Planeación</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Liderar seguimiento y evaluación de políticas, planes y proyectos</li>
+                                <li>Gestionar operaciones estadísticas estratégicas y visualización de datos</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag datos">Datos</span>
+                            <span class="item-tag politicas">Políticas Públicas</span>
+                            <span class="item-tag planeacion">Planeación Territorial</span>
+                        </div>
+                    </div>
+
+                    <!-- Profesional Especializado -->
+                    <div class="timeline-item cargo-publico" data-tags="politicas">
+                        <div class="timeline-date">Febrero 2020 - Mayo 2021</div>
+                        <div class="timeline-title">Profesional Especializado</div>
+                        <div class="timeline-company">Alcaldía de Medellín - Unidad de Planeación y Política Social</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Desarrollar procesos técnicos para soporte de políticas y proyectos sociales</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag politicas">Políticas Públicas</span>
+                        </div>
+                    </div>
+
+                    <!-- SOCYA -->
+                    <div class="timeline-item consultoria" data-tags="datos planeacion">
+                        <div class="timeline-date">Julio 2017 - Enero 2020</div>
+                        <div class="timeline-title">Coordinadora</div>
+                        <div class="timeline-company">Fundación SOCYA</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Estructurar Sistemas de Información para procesos sociales</li>
+                                <li>Coordinar caracterización socioeconómica y análisis de percepción comunitaria</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag datos">Datos</span>
+                            <span class="item-tag planeacion">Planeación Territorial</span>
+                        </div>
+                    </div>
+
+                    <!-- Docencia UNAL -->
+                    <div class="timeline-item docencia" data-tags="politicas planeacion">
+                        <div class="timeline-date">Febrero 2016 - Actualmente</div>
+                        <div class="timeline-title">Docente Ocasional</div>
+                        <div class="timeline-company">Universidad Nacional de Colombia, sede Medellín</div>
+                        <div class="timeline-description">
+                            <strong>Pregrado:</strong> Política Social Comparada, Distopías y Política, Evaluación de Políticas Públicas, Gestión y Administración Pública<br>
+                            <strong>Posgrado:</strong> Ciencia Política I y II, Fundamentos de Gestión y Política Pública
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag politicas">Políticas Públicas</span>
+                            <span class="item-tag planeacion">Planeación Territorial</span>
+                        </div>
+                    </div>
+
+                    <!-- Pascual Bravo -->
+                    <div class="timeline-item docencia" data-tags="planeacion politicas">
+                        <div class="timeline-date">Octubre 2024 - Actualmente</div>
+                        <div class="timeline-title">Docente de Posgrado</div>
+                        <div class="timeline-company">Institución Universitaria Pascual Bravo</div>
+                        <div class="timeline-description">
+                            Curso Políticas y Marco Jurídico para el Proyecto - Maestría en Diseño y Evaluación de Proyectos Regionales
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag planeacion">Planeación Territorial</span>
+                            <span class="item-tag politicas">Políticas Públicas</span>
+                        </div>
+                    </div>
+
+                    <!-- UdeA -->
+                    <div class="timeline-item docencia" data-tags="planeacion">
+                        <div class="timeline-date">Octubre 2024 - Actualmente</div>
+                        <div class="timeline-title">Docente de Pregrado</div>
+                        <div class="timeline-company">Universidad de Antioquia</div>
+                        <div class="timeline-description">
+                            Curso Planeación - Pregrado en Ciencia Política
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag planeacion">Planeación Territorial</span>
+                        </div>
+                    </div>
+
+                    <!-- EAFIT Docencia -->
+                    <div class="timeline-item docencia" data-tags="planeacion politicas">
+                        <div class="timeline-date">Julio 2024 - Actualmente</div>
+                        <div class="timeline-title">Docente Extensión</div>
+                        <div class="timeline-company">Universidad EAFIT</div>
+                        <div class="timeline-description">
+                            Diplomado en Gestión Pública Territorial y Sostenibilidad<br>
+                            Módulo Gestión Territorial – Curso de Gobernanza Territorial
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="item-tag planeacion">Planeación Territorial</span>
+                            <span class="item-tag politicas">Políticas Públicas</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="teaching-section">
-                <div class="teaching-institution">Universidad de Antioquia</div>
-                <div class="teaching-date">Docente de Pregrado | Octubre 2024 - Actualmente</div>
-                <div class="teaching-courses">
-                    Curso Planeación - Pregrado en Ciencia Política
+        <!-- Proyectos Pedagógicos -->
+        <div id="proyectos" class="content-section">
+            <div class="section-card">
+                <h2>Proyectos Pedagógicos</h2>
+
+                <div class="project-card">
+                    <div class="project-title">Simulador de Plan Parcial Urbano - Medellín</div>
+                    <div class="project-subtitle">Universidad de Antioquia</div>
+                    <div class="project-description">
+                        Herramienta educativa para experimentar con usos del suelo, cargas y beneficios urbanísticos en 12 manzanas típicas. Permite a estudiantes comprender la dinámica de la planificación urbana de manera interactiva.
+                    </div>
+                    <a href="https://planparcial.netlify.app/" target="_blank" class="project-link">Ver Proyecto</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Simulador de Planta Municipal</div>
+                    <div class="project-subtitle">Sistema de Gestión Organizacional</div>
+                    <div class="project-description">
+                        Sistema de cálculo y visualización de estructura organizacional municipal. Herramienta para analizar y diseñar plantas de personal en entidades públicas.
+                    </div>
+                    <a href="https://simuladorplantalomaverde.netlify.app/" target="_blank" class="project-link">Ver Proyecto</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Semillero de Gestión y Políticas Públicas Territoriales</div>
+                    <div class="project-subtitle">Coordinadora | 2024</div>
+                    <div class="project-description">
+                        Espacio de investigación de políticas públicas donde estudiantes desarrollan competencias en análisis territorial y gestión pública.
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Semillero de Análisis de Redes Sociales - ARS</div>
+                    <div class="project-subtitle">Fundadora y Coordinadora | 2019</div>
+                    <div class="project-description">
+                        Espacio de investigación psicosocial y de políticas públicas con la aplicación de metodología ARS para comprender dinámicas sociales y políticas.
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="teaching-section">
-                <div class="teaching-institution">Universidad EAFIT, sede Medellín</div>
-                <div class="teaching-date">Docente Extensión | Julio 2024 - Actualmente</div>
-                <div class="teaching-courses">
-                    Diplomado en Gestión Pública Territorial y Sostenibilidad<br>
-                    Módulo Gestión Territorial – Curso de Gobernanza Territorial
+        <!-- Formación -->
+        <div id="formacion" class="content-section">
+            <div class="section-card">
+                <h2>Formación Académica</h2>
+
+                <div class="education-item">
+                    <div class="education-title">Magíster en Estudios Políticos</div>
+                    <div class="education-institution">Universidad Nacional de Colombia, sede Medellín</div>
+                    <div class="education-date">Agosto 2014 - Julio 2015</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">Politóloga</div>
+                    <div class="education-institution">Universidad Nacional de Colombia, sede Medellín</div>
+                    <div class="education-date">Agosto 2008 - Julio 2012</div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>Formación Académica</h2>
+        <!-- Publicaciones -->
+        <div id="publicaciones" class="content-section">
+            <div class="section-card">
+                <h2>Publicaciones</h2>
 
-            <div class="education-item">
-                <div class="education-title">Magíster en Estudios Políticos</div>
-                <div class="education-institution">Universidad Nacional de Colombia, sede Medellín</div>
-                <div class="education-date">Agosto 2014 - Julio 2015</div>
+                <div class="publication">
+                    <p>
+                        Pirazán García, J. y Ríos Gallego, S. Y. (2014). <strong>El enfoque argumentativo para el análisis de políticas públicas desde la perspectiva de Frank Fischer.</strong> <em>Forum. Revista Departamento de Ciencia Política</em>, (6), 51–62.
+                    </p>
+                    <p style="margin-top: 10px;">
+                        <a href="https://revistas.unal.edu.co/index.php/forum/article/view/52966" target="_blank">Ver publicación completa</a>
+                    </p>
+                </div>
             </div>
-
-            <div class="education-item">
-                <div class="education-title">Politóloga</div>
-                <div class="education-institution">Universidad Nacional de Colombia, sede Medellín</div>
-                <div class="education-date">Agosto 2008 - Julio 2012</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Publicaciones</h2>
-
-            <div class="publication">
-                Pirazán García, J. y Ríos Gallego, S. Y. (2014). El enfoque argumentativo para el análisis de políticas públicas desde la perspectiva de Frank Fischer. <em>Forum. Revista Departamento de Ciencia Política</em>, (6), 51–62.
-                <br><a href="https://revistas.unal.edu.co/index.php/forum/article/view/52966" target="_blank">https://revistas.unal.edu.co/index.php/forum/article/view/52966</a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Proyectos Académicos y Culturales</h2>
-
-            <div class="project">
-                <div class="project-title">Semillero de Gestión y Políticas Públicas Territoriales</div>
-                <div class="project-role">Coordinadora | 2024</div>
-                <p>Espacio de investigación de políticas públicas.</p>
-            </div>
-
-            <div class="project">
-                <div class="project-title">Semillero de Análisis de Redes Sociales - ARS</div>
-                <div class="project-role">Fundadora y Coordinadora | 2019</div>
-                <p>Espacio de investigación psicosocial y de políticas públicas con la aplicación de metodología ARS.</p>
-            </div>
-        </section>
+        </div>
     </div>
+
+    <script>
+        // Navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active from all tabs
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Activate corresponding tab
+            event.target.classList.add('active');
+        }
+
+        // Category Filter
+        let activeCategory = 'todos';
+        let activeTags = [];
+
+        function filterCategory(category) {
+            activeCategory = category;
+
+            // Update button states
+            document.querySelectorAll('.filter-group:first-child .tag').forEach(tag => {
+                tag.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            applyFilters();
+        }
+
+        function filterTag(tag) {
+            const tagElement = event.target;
+
+            if (activeTags.includes(tag)) {
+                activeTags = activeTags.filter(t => t !== tag);
+                tagElement.classList.remove('active');
+            } else {
+                activeTags.push(tag);
+                tagElement.classList.add('active');
+            }
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const items = document.querySelectorAll('.timeline-item');
+
+            items.forEach(item => {
+                let showByCategory = activeCategory === 'todos' || item.classList.contains(activeCategory);
+                let showByTags = true;
+
+                if (activeTags.length > 0) {
+                    const itemTags = item.getAttribute('data-tags').split(' ');
+                    showByTags = activeTags.some(tag => itemTags.includes(tag));
+                }
+
+                if (showByCategory && showByTags) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
