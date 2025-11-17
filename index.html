@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasblleidy Pirazán García - Politóloga</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Jasblleidy Pirazán García - Politóloga | Tecnología, Datos y Política</title>
+    <meta name="description" content="Jasblleidy Pirazán García - Politóloga y Magíster en Estudios Políticos. Especializada en análisis de datos, políticas públicas y planeación territorial en Medellín, Colombia.">
+    <meta name="keywords" content="Jasblleidy Pirazán, politóloga, políticas públicas, análisis de datos, planeación territorial, Medellín, Colombia, tecnología política">
+    <meta name="author" content="Jasblleidy Pirazán García">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jasblleidy Pirazán García - Politóloga">
+    <meta property="og:description" content="Especializada en análisis de datos sociopolíticos, políticas públicas y planeación territorial.">
+    <meta property="og:url" content="https://jasblleidypirazan.github.io/JasblleidyPirazan/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jasblleidy Pirazán García - Politóloga">
+    <meta name="twitter:description" content="Especializada en análisis de datos sociopolíticos, políticas públicas y planeación territorial.">
+
     <style>
         * {
             margin: 0;
@@ -15,7 +32,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f5f5f5;
             min-height: 100vh;
         }
 
@@ -31,35 +48,48 @@
             border-radius: 15px;
             padding: 40px;
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 30px;
+            border-top: 5px solid #000;
         }
 
         h1 {
-            color: #2c5282;
+            color: #000;
             font-size: 2.8em;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #667eea;
-            font-size: 1.2em;
-            font-weight: 600;
             margin-bottom: 15px;
         }
 
-        .contact-info {
+        .tagline {
             color: #666;
-            font-size: 0.95em;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
-        .contact-info a {
-            color: #667eea;
+        .subtitle {
+            color: #999;
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .linkedin-link {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #000;
+            color: white;
             text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
         }
 
-        .contact-info a:hover {
-            text-decoration: underline;
+        .linkedin-link:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         /* Abstract */
@@ -67,19 +97,20 @@
             background: white;
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 30px;
+            border-left: 5px solid #000;
         }
 
         .abstract h2 {
-            color: #2c5282;
+            color: #000;
             margin-bottom: 15px;
             font-size: 1.5em;
         }
 
         .abstract p {
             font-size: 1.1em;
-            color: #4a5568;
+            color: #555;
             line-height: 1.8;
         }
 
@@ -88,7 +119,7 @@
             background: white;
             border-radius: 15px;
             padding: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 30px;
             display: flex;
             flex-wrap: wrap;
@@ -104,20 +135,20 @@
             font-size: 1em;
             font-weight: 600;
             transition: all 0.3s ease;
-            background: #e2e8f0;
-            color: #4a5568;
+            background: #f5f5f5;
+            color: #666;
         }
 
         .nav-tab:hover {
-            background: #667eea;
+            background: #000;
             color: white;
             transform: translateY(-2px);
         }
 
         .nav-tab.active {
-            background: #667eea;
+            background: #000;
             color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         /* Filters */
@@ -125,7 +156,7 @@
             background: white;
             border-radius: 15px;
             padding: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 30px;
         }
 
@@ -139,7 +170,7 @@
 
         .filter-label {
             font-weight: 600;
-            color: #2c5282;
+            color: #000;
             margin-bottom: 10px;
             display: block;
         }
@@ -156,28 +187,28 @@
             font-size: 0.9em;
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 2px solid #e2e8f0;
+            border: 2px solid #ddd;
             background: white;
-            color: #4a5568;
+            color: #666;
         }
 
         .tag:hover {
-            border-color: #667eea;
-            color: #667eea;
+            border-color: #000;
+            color: #000;
         }
 
         .tag.active {
-            background: #667eea;
+            background: #000;
             color: white;
-            border-color: #667eea;
+            border-color: #000;
         }
 
-        .tag.datos { border-color: #38a169; }
-        .tag.datos.active { background: #38a169; border-color: #38a169; }
-        .tag.politicas { border-color: #d69e2e; }
-        .tag.politicas.active { background: #d69e2e; border-color: #d69e2e; }
-        .tag.planeacion { border-color: #e53e3e; }
-        .tag.planeacion.active { background: #e53e3e; border-color: #e53e3e; }
+        .tag.datos { border-color: #666; }
+        .tag.datos.active { background: #666; border-color: #666; }
+        .tag.politicas { border-color: #999; }
+        .tag.politicas.active { background: #999; border-color: #999; }
+        .tag.planeacion { border-color: #333; }
+        .tag.planeacion.active { background: #333; border-color: #333; }
 
         /* Content Sections */
         .content-section {
@@ -192,15 +223,15 @@
             background: white;
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 30px;
         }
 
         .section-card h2 {
-            color: #2c5282;
+            color: #000;
             margin-bottom: 25px;
             font-size: 1.8em;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #000;
             padding-bottom: 10px;
         }
 
@@ -217,7 +248,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(to bottom, #667eea, #764ba2);
+            background: linear-gradient(to bottom, #000, #666);
             border-radius: 2px;
         }
 
@@ -240,16 +271,16 @@
             width: 16px;
             height: 16px;
             background: white;
-            border: 4px solid #667eea;
+            border: 4px solid #000;
             border-radius: 50%;
         }
 
-        .timeline-item.cargo-publico::before { border-color: #2c5282; }
-        .timeline-item.docencia::before { border-color: #38a169; }
-        .timeline-item.consultoria::before { border-color: #d69e2e; }
+        .timeline-item.cargo-publico::before { border-color: #000; }
+        .timeline-item.docencia::before { border-color: #666; }
+        .timeline-item.consultoria::before { border-color: #999; }
 
         .timeline-date {
-            color: #667eea;
+            color: #000;
             font-weight: 600;
             font-size: 0.95em;
             margin-bottom: 5px;
@@ -258,18 +289,18 @@
         .timeline-title {
             font-size: 1.2em;
             font-weight: bold;
-            color: #2d3748;
+            color: #000;
             margin-bottom: 5px;
         }
 
         .timeline-company {
-            color: #4a5568;
+            color: #666;
             font-weight: 600;
             margin-bottom: 10px;
         }
 
         .timeline-description {
-            color: #4a5568;
+            color: #555;
             margin-bottom: 10px;
         }
 
@@ -295,47 +326,47 @@
             color: white;
         }
 
-        .item-tag.datos { background: #38a169; }
-        .item-tag.politicas { background: #d69e2e; }
-        .item-tag.planeacion { background: #e53e3e; }
+        .item-tag.datos { background: #666; }
+        .item-tag.politicas { background: #999; }
+        .item-tag.planeacion { background: #333; }
 
         /* Projects */
         .project-card {
-            background: #f7fafc;
+            background: #f9f9f9;
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 20px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #000;
             transition: all 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateX(10px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .project-title {
             font-size: 1.3em;
             font-weight: bold;
-            color: #2c5282;
+            color: #000;
             margin-bottom: 10px;
         }
 
         .project-subtitle {
-            color: #667eea;
+            color: #666;
             font-weight: 600;
             margin-bottom: 10px;
         }
 
         .project-description {
-            color: #4a5568;
+            color: #555;
             margin-bottom: 15px;
         }
 
         .project-link {
             display: inline-block;
             padding: 10px 20px;
-            background: #667eea;
+            background: #000;
             color: white;
             text-decoration: none;
             border-radius: 25px;
@@ -344,57 +375,63 @@
         }
 
         .project-link:hover {
-            background: #764ba2;
+            background: #333;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         /* Education */
         .education-item {
             margin-bottom: 20px;
             padding: 15px;
-            background: #f7fafc;
+            background: #f9f9f9;
             border-radius: 10px;
         }
 
         .education-title {
             font-weight: bold;
-            color: #2d3748;
+            color: #000;
             font-size: 1.1em;
         }
 
         .education-institution {
-            color: #667eea;
+            color: #666;
             font-weight: 600;
         }
 
         .education-date {
-            color: #718096;
+            color: #999;
             font-size: 0.9em;
         }
 
         /* Publications */
         .publication {
             padding: 20px;
-            background: #f7fafc;
+            background: #f9f9f9;
             border-radius: 10px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #000;
         }
 
         .publication a {
-            color: #667eea;
+            color: #000;
             text-decoration: none;
             font-weight: 600;
+            border-bottom: 2px solid #000;
         }
 
         .publication a:hover {
-            text-decoration: underline;
+            color: #666;
+            border-bottom-color: #666;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
             }
 
             .nav-tabs {
@@ -420,12 +457,9 @@
     <div class="container">
         <header>
             <h1>Jasblleidy Pirazán García</h1>
+            <div class="tagline">Tecnología | Datos | Política</div>
             <div class="subtitle">Politóloga | Magíster en Estudios Políticos</div>
-            <div class="contact-info">
-                Medellín, Antioquia |
-                <a href="mailto:jasblleidy@gmail.com">jasblleidy@gmail.com</a> |
-                310 822 2613
-            </div>
+            <a href="https://www.linkedin.com/in/jasblleidy/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn</a>
         </header>
 
         <div class="abstract">
@@ -639,7 +673,7 @@
                     <div class="project-description">
                         Herramienta educativa para experimentar con usos del suelo, cargas y beneficios urbanísticos en 12 manzanas típicas. Permite a estudiantes comprender la dinámica de la planificación urbana de manera interactiva.
                     </div>
-                    <a href="https://planparcial.netlify.app/" target="_blank" class="project-link">Ver Proyecto</a>
+                    <a href="https://planparcial.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">Ver Proyecto</a>
                 </div>
 
                 <div class="project-card">
@@ -648,7 +682,7 @@
                     <div class="project-description">
                         Sistema de cálculo y visualización de estructura organizacional municipal. Herramienta para analizar y diseñar plantas de personal en entidades públicas.
                     </div>
-                    <a href="https://simuladorplantalomaverde.netlify.app/" target="_blank" class="project-link">Ver Proyecto</a>
+                    <a href="https://simuladorplantalomaverde.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">Ver Proyecto</a>
                 </div>
 
                 <div class="project-card">
@@ -698,7 +732,7 @@
                         Pirazán García, J. y Ríos Gallego, S. Y. (2014). <strong>El enfoque argumentativo para el análisis de políticas públicas desde la perspectiva de Frank Fischer.</strong> <em>Forum. Revista Departamento de Ciencia Política</em>, (6), 51–62.
                     </p>
                     <p style="margin-top: 10px;">
-                        <a href="https://revistas.unal.edu.co/index.php/forum/article/view/52966" target="_blank">Ver publicación completa</a>
+                        <a href="https://revistas.unal.edu.co/index.php/forum/article/view/52966" target="_blank" rel="noopener noreferrer">Ver publicación completa</a>
                     </p>
                 </div>
             </div>

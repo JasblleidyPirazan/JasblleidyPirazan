@@ -15,11 +15,31 @@ Tu sitio estará disponible en: `https://[tu-usuario].github.io/[nombre-reposito
 
 ## Estructura del proyecto
 
-- `index.html` - Página principal con el currículum vitae
+- `index.html` - Página principal con currículum interactivo
+- `sitemap.xml` - Mapa del sitio para SEO
 
 ## Características
 
-- Diseño responsivo (se adapta a móviles y escritorio)
-- Optimizado para impresión
-- Sin dependencias externas
-- Carga rápida
+- **Diseño Minimalista:** Esquema de colores negro, gris y blanco
+- **Navegación por Pestañas:** Experiencia, Proyectos, Formación, Publicaciones
+- **Filtros Interactivos:**
+  - Por categoría: Cargos Públicos, Docencia, Consultoría
+  - Por área: Datos, Políticas Públicas, Planeación Territorial
+- **Línea de Tiempo Visual:** Trayectoria profesional con indicadores
+- **SEO Optimizado:** Meta tags, Open Graph, Twitter Cards, sitemap.xml
+- **Enlaces a Proyectos:** Simuladores pedagógicos interactivos
+- **Responsive:** Se adapta a móviles y escritorio
+- **Sin dependencias:** JavaScript vanilla, carga rápida
+
+## SEO
+
+Para acelerar la indexación en Google:
+
+1. Registra el sitio en [Google Search Console](https://search.google.com/search-console)
+2. Sube el `sitemap.xml` en Search Console
+3. Solicita indexación de la URL principal
+
+## Enlaces
+
+- Sitio web: https://jasblleidypirazan.github.io/JasblleidyPirazan/
+- LinkedIn: https://www.linkedin.com/in/jasblleidy/
